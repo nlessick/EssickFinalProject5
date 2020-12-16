@@ -1,0 +1,14 @@
+﻿@model ResponseViewModel
+
+@{ 
+
+}
+
+<div>
+    <form methods="post" asp-controller="Home" asp-action="Response">
+        <input asp-for="PostId" type="hidden"/>
+        <input asp-for="MainId" type="hidden"/>
+        <input asp-for="Content" />
+        <button type="submit">Post Response</button>
+    </form>
+</div>

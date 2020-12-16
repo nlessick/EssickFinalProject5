@@ -1,0 +1,68 @@
+﻿
+body {
+    margin: 0;
+    background-color: #808080;
+}
+
+.post {
+    background-image: url('content/static/hawkeye.png');
+    margin: 5px;
+    display: flex;
+    position: relative;
+    background-size: contain;
+    height: 250px;
+}
+
+.main-img {
+    height: 400px;
+    background-image: url('content/static/stadium.png');
+    background-size: contain;
+    background-position: center;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+nav a {
+    height: 100%;
+    display: inline-block;
+}
+
+a {
+    color: #ffffff;
+}
+
+.post img {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.title {
+    transform: translateX(-50%);
+    color: #f5f70f;
+    font-size: 50px;
+    left: 50%;
+    top: 30%;
+    position: absolute;
+}
+
+nav {
+    background-color: #808080;
+    height: 50px;
+    text-align: left;
+    width: 100%;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.post-body {
+    margin: -5px 5px 0;
+    background-color: #ffffff;
+}

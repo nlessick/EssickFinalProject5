@@ -1,0 +1,43 @@
+﻿@model Post
+
+@{ 
+
+}
+
+<div class="container">
+    <div class="post">
+        @if (!String.IsNullOrEmpty(Model.Image))
+        {
+            <span class="title">@Model.Title</span>
+            <img src="~/content/static/hawkeye.png" />
+        }
+
+        </div>
+    <div class="post-body">
+        @Model.Contents
+    </div>
+    <div class="response-section">
+        @{
+            await Html.RenderPartialAsync("PartialResponseView", new ResponseViewModel { PostId = Model.Id, MainId = 0 });
+        }
+        @foreach (var c in Model.MainComments)
+        {
+            <p>
+                @c.Content --- @c.Time
+            </p>
+            <div>
+                <h4>Other Responses</h4>
+                @{
+                    await Html.RenderPartialAsync("PartialResponseView", new ResponseViewModel { PostId = Model.Id, MainId = c.Id });
+                }
+                @foreach(var r in c.Response2Reponses)
+                {
+                    <p>
+                        @c.Content -- @c.Time
+                    </p>
+                }
+            </div>
+        }
+    </div>
+</div>
+
